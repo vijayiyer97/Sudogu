@@ -1,6 +1,6 @@
 //
 //  Cell.swift
-//  Sudogu
+//  Shared
 //
 //  Created by Vijay Iyer on 7/24/20.
 //  Copyright © 2020 Vijay Iyer. All rights reserved.
@@ -34,11 +34,11 @@ final class Cell: ObservableObject {
             candidates = []
         }
     }
-    /// Stores the list of candidate values a cell may contain.
+    /// The list of candidate values a cell may contain.
     @Published var candidates: Candidates
-    /// Stores the location data for the cell. Data is separated into three categories: row, column, and region.
+    /// The location data for the cell. Data is separated into three categories: row, column, and region.
     @Published var location: Location
-    /// Stores data regarding the frame of the cell within its view.
+    /// Data regarding the frame of the cell within its view.
     //@Published var frame: Frame = Frame()
     
     // MARK: Stored Properties
@@ -86,11 +86,8 @@ final class Cell: ObservableObject {
     }
 }
 
-// MARK: Extensions
-/// Extends `Cell` with computed properties and nested structures.
+// MARK: Encapsulated Types
 extension Cell {
-    
-    // MARK: Nested Structures
     /**
      The location of  a `Cell` instance in terms of named coordinate systems.
      
@@ -119,12 +116,19 @@ extension Cell {
         case correct
         /// A state of a cell with an incorrect value.
         case incorrect
-        /// A state of a highlighted cell.
-        case selected
     }
+}
+
+// MARK: Computed Properties
+extension Cell {
+    /// The global row position of the cell
+    var row: Int { location.global.row }
+    /// The global column position of the cell
+    var column: Int { location.global.column }
+    /// The region coordinates of the cell
+    var region: Coordinate { location.local }
     
-    // MARK: Computed Properties
-    /// Stores the background color of the cell.
+    /// The background color of the cell.
     var color: Color {
         switch state {
         case .mutable:
@@ -135,20 +139,21 @@ extension Cell {
             return Color.green.opacity(0.1)
         case .incorrect:
             return Color.red.opacity(0.1)
-        case .selected:
-            return Color.blue.opacity(0.1)
         }
     }
 }
-/// Extends `Cell.Location` with computed properties and nested structures
-extension Cell.Location { }
-/// Extends `Cell.Location` with `Hashable` and `Codable` protocol conformance.
-extension Cell.Location: Hashable, Codable {
+
+// MARK: Hashable Protocol Conformance
+extension Cell.Location: Hashable {
     static func == (lhs: Cell.Location, rhs: Cell.Location) -> Bool {
         return lhs.global == rhs.global && lhs.local == rhs.local
     }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(global)
+        hasher.combine(local)
+    }
 }
-/// Extends `Cell.State` with `Codable` protocol conformance.
 extension Cell.State: Codable {
     private enum Key: CodingKey {
         case rawValue
@@ -171,7 +176,6 @@ extension Cell.State: Codable {
         try container.encode(self.rawValue, forKey: .rawValue)
     }
 }
-/// Extends `Cell` with `Hashable` protocol conformance.
 extension Cell: Hashable {
     static func == (lhs: Cell, rhs: Cell) -> Bool {
         return lhs.location == rhs.location && lhs.value == rhs.value && lhs.candidates == rhs.candidates
@@ -183,7 +187,9 @@ extension Cell: Hashable {
         hasher.combine(candidates)
     }
 }
-/// Extends `Cell` with `Codable` protocol conformance.
+
+// MARK: Codable Protocol Conformance
+extension Cell.Location: Codable { }
 extension Cell: Codable {
     private enum CodingKeys: String, CodingKey {
         case value

@@ -1,6 +1,6 @@
 //
 //  Coordinate.swift
-//  Sudogu
+//  Shared
 //
 //  Created by Vijay Iyer on 7/24/20.
 //  Copyright © 2020 Vijay Iyer. All rights reserved.
@@ -25,8 +25,8 @@ struct Coordinate {
     }
 }
 
+// MARK: Hashable Protocol Conformance
+extension Coordinate: Hashable { }
 
-/// Extends `Coordinate` with computed properties and nested structures.
-extension Coordinate { }
-/// Extends `Value` with `Hashable` and `Codable` protocol conformance.
-extension Coordinate: Hashable, Codable { }
+// MARK: Codable Protocol Conformance
+extension Coordinate: Codable { }

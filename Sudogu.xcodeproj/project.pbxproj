@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B1473D6E24CCA6D300584F88 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1473D6A24CCA0AA00584F88 /* CellView.swift */; };
+		B168C2EB24CC86CD00FFE4A1 /* LinearGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B168C2EA24CC86CD00FFE4A1 /* LinearGradient.swift */; };
+		B168C2EC24CC86CD00FFE4A1 /* LinearGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B168C2EA24CC86CD00FFE4A1 /* LinearGradient.swift */; };
+		B168C2F324CC897200FFE4A1 /* iOS_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = B168C2F024CC890800FFE4A1 /* iOS_View.swift */; };
+		B168C2F524CC89B900FFE4A1 /* macOS_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = B168C2F124CC891C00FFE4A1 /* macOS_View.swift */; };
+		B16F358B24CC938000F045C1 /* MainPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16F358A24CC938000F045C1 /* MainPanel.swift */; };
+		B16F358C24CC938000F045C1 /* MainPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16F358A24CC938000F045C1 /* MainPanel.swift */; };
+		B16F358F24CC93EC00F045C1 /* NumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16F358E24CC93EC00F045C1 /* NumberView.swift */; };
+		B16F359024CC93EC00F045C1 /* NumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16F358E24CC93EC00F045C1 /* NumberView.swift */; };
+		B16F359224CC94A900F045C1 /* UserInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16F359124CC94A900F045C1 /* UserInterface.swift */; };
+		B16F359324CC94A900F045C1 /* UserInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16F359124CC94A900F045C1 /* UserInterface.swift */; };
+		B16F359524CC98E100F045C1 /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16F359424CC98E100F045C1 /* NotesView.swift */; };
+		B16F359624CC98E100F045C1 /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16F359424CC98E100F045C1 /* NotesView.swift */; };
+		B16F359B24CC9D0300F045C1 /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16F359A24CC9D0300F045C1 /* Set.swift */; };
+		B16F359C24CC9D0300F045C1 /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16F359A24CC9D0300F045C1 /* Set.swift */; };
 		B1BCAE0324CC7B5B00BEEB26 /* SudoguApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BCADF024CC7B5A00BEEB26 /* SudoguApp.swift */; };
 		B1BCAE0424CC7B5B00BEEB26 /* SudoguApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BCADF024CC7B5A00BEEB26 /* SudoguApp.swift */; };
 		B1BCAE0524CC7B5B00BEEB26 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BCADF124CC7B5A00BEEB26 /* ContentView.swift */; };
@@ -26,12 +41,21 @@
 		B1BCAE2624CC7BD800BEEB26 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BCAE1B24CC7BD800BEEB26 /* Color.swift */; };
 		B1BCAE2724CC7BD800BEEB26 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BCAE1B24CC7BD800BEEB26 /* Color.swift */; };
 		B1BCAE2C24CC7C1100BEEB26 /* softClick.aiff in Resources */ = {isa = PBXBuildFile; fileRef = B1BCAE2A24CC7C1100BEEB26 /* softClick.aiff */; };
-		B1BCAE2D24CC7C1100BEEB26 /* softClick.aiff in Resources */ = {isa = PBXBuildFile; fileRef = B1BCAE2A24CC7C1100BEEB26 /* softClick.aiff */; };
 		B1BCAE2E24CC7C1100BEEB26 /* hardClick.aiff in Resources */ = {isa = PBXBuildFile; fileRef = B1BCAE2B24CC7C1100BEEB26 /* hardClick.aiff */; };
-		B1BCAE2F24CC7C1100BEEB26 /* hardClick.aiff in Resources */ = {isa = PBXBuildFile; fileRef = B1BCAE2B24CC7C1100BEEB26 /* hardClick.aiff */; };
+		B1BCAE3124CC844700BEEB26 /* Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BCAE3024CC844700BEEB26 /* Frame.swift */; };
+		B1BCAE3224CC845000BEEB26 /* Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BCAE3024CC844700BEEB26 /* Frame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B1473D6A24CCA0AA00584F88 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
+		B168C2EA24CC86CD00FFE4A1 /* LinearGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearGradient.swift; sourceTree = "<group>"; };
+		B168C2F024CC890800FFE4A1 /* iOS_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_View.swift; sourceTree = "<group>"; };
+		B168C2F124CC891C00FFE4A1 /* macOS_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macOS_View.swift; sourceTree = "<group>"; };
+		B16F358A24CC938000F045C1 /* MainPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPanel.swift; sourceTree = "<group>"; };
+		B16F358E24CC93EC00F045C1 /* NumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberView.swift; sourceTree = "<group>"; };
+		B16F359124CC94A900F045C1 /* UserInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInterface.swift; sourceTree = "<group>"; };
+		B16F359424CC98E100F045C1 /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
+		B16F359A24CC9D0300F045C1 /* Set.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Set.swift; sourceTree = "<group>"; };
 		B1BCADF024CC7B5A00BEEB26 /* SudoguApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudoguApp.swift; sourceTree = "<group>"; };
 		B1BCADF124CC7B5A00BEEB26 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B1BCADF224CC7B5B00BEEB26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -48,6 +72,7 @@
 		B1BCAE1B24CC7BD800BEEB26 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		B1BCAE2A24CC7C1100BEEB26 /* softClick.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = softClick.aiff; sourceTree = "<group>"; };
 		B1BCAE2B24CC7C1100BEEB26 /* hardClick.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = hardClick.aiff; sourceTree = "<group>"; };
+		B1BCAE3024CC844700BEEB26 /* Frame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Frame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +93,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B1473D6D24CCA1AF00584F88 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B1473D6F24CCA6DD00584F88 /* ContentViews */ = {
+			isa = PBXGroup;
+			children = (
+				B1473D6A24CCA0AA00584F88 /* CellView.swift */,
+			);
+			path = ContentViews;
+			sourceTree = "<group>";
+		};
+		B168C2ED24CC870A00FFE4A1 /* Content Views */ = {
+			isa = PBXGroup;
+			children = (
+				B16F358A24CC938000F045C1 /* MainPanel.swift */,
+				B16F358D24CC93A200F045C1 /* Board Views */,
+			);
+			path = "Content Views";
+			sourceTree = "<group>";
+		};
+		B168C2EE24CC88A500FFE4A1 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				B1BCAE2924CC7C1100BEEB26 /* Sounds */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		B168C2EF24CC88E200FFE4A1 /* Content Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Content Views";
+			sourceTree = "<group>";
+		};
+		B16F358D24CC93A200F045C1 /* Board Views */ = {
+			isa = PBXGroup;
+			children = (
+				B16F359424CC98E100F045C1 /* NotesView.swift */,
+				B16F358E24CC93EC00F045C1 /* NumberView.swift */,
+			);
+			path = "Board Views";
+			sourceTree = "<group>";
+		};
 		B1BCADEA24CC7B5A00BEEB26 = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +157,7 @@
 				B1BCADF024CC7B5A00BEEB26 /* SudoguApp.swift */,
 				B1BCADF124CC7B5A00BEEB26 /* ContentView.swift */,
 				B1BCAE1A24CC7BD800BEEB26 /* API Extensions */,
+				B168C2ED24CC870A00FFE4A1 /* Content Views */,
 				B1BCAE1124CC7BD800BEEB26 /* Models */,
 				B1BCAE1924CC7BD800BEEB26 /* Wrappers */,
 				B1BCAE2824CC7BDE00BEEB26 /* Assets */,
@@ -103,6 +177,10 @@
 		B1BCADF924CC7B5B00BEEB26 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				B168C2F024CC890800FFE4A1 /* iOS_View.swift */,
+				B1473D6D24CCA1AF00584F88 /* Models */,
+				B168C2EF24CC88E200FFE4A1 /* Content Views */,
+				B168C2EE24CC88A500FFE4A1 /* Assets */,
 				B1BCADFA24CC7B5B00BEEB26 /* Info.plist */,
 			);
 			path = iOS;
@@ -111,6 +189,8 @@
 		B1BCAE0024CC7B5B00BEEB26 /* macOS */ = {
 			isa = PBXGroup;
 			children = (
+				B168C2F124CC891C00FFE4A1 /* macOS_View.swift */,
+				B1473D6F24CCA6DD00584F88 /* ContentViews */,
 				B1BCAE0124CC7B5B00BEEB26 /* Info.plist */,
 				B1BCAE0224CC7B5B00BEEB26 /* macOS.entitlements */,
 			);
@@ -120,25 +200,26 @@
 		B1BCAE1124CC7BD800BEEB26 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B1BCAE1224CC7BD800BEEB26 /* Miscellany */,
 				B1BCAE1624CC7BD800BEEB26 /* Sudoku */,
+				B16F359124CC94A900F045C1 /* UserInterface.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		B1BCAE1224CC7BD800BEEB26 /* Miscellany */ = {
+		B1BCAE1224CC7BD800BEEB26 /* Support */ = {
 			isa = PBXGroup;
 			children = (
 				B1BCAE1324CC7BD800BEEB26 /* Dimensions.swift */,
 				B1BCAE1424CC7BD800BEEB26 /* Coordinate.swift */,
 				B1BCAE1524CC7BD800BEEB26 /* Value.swift */,
 			);
-			path = Miscellany;
+			path = Support;
 			sourceTree = "<group>";
 		};
 		B1BCAE1624CC7BD800BEEB26 /* Sudoku */ = {
 			isa = PBXGroup;
 			children = (
+				B1BCAE1224CC7BD800BEEB26 /* Support */,
 				B1BCAE1724CC7BD800BEEB26 /* Cell.swift */,
 				B1BCAE1824CC7BD800BEEB26 /* Sudoku.swift */,
 			);
@@ -148,6 +229,7 @@
 		B1BCAE1924CC7BD800BEEB26 /* Wrappers */ = {
 			isa = PBXGroup;
 			children = (
+				B1BCAE3024CC844700BEEB26 /* Frame.swift */,
 			);
 			path = Wrappers;
 			sourceTree = "<group>";
@@ -156,6 +238,8 @@
 			isa = PBXGroup;
 			children = (
 				B1BCAE1B24CC7BD800BEEB26 /* Color.swift */,
+				B168C2EA24CC86CD00FFE4A1 /* LinearGradient.swift */,
+				B16F359A24CC9D0300F045C1 /* Set.swift */,
 			);
 			path = "API Extensions";
 			sourceTree = "<group>";
@@ -164,7 +248,6 @@
 			isa = PBXGroup;
 			children = (
 				B1BCADF224CC7B5B00BEEB26 /* Assets.xcassets */,
-				B1BCAE2924CC7C1100BEEB26 /* Sounds */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -266,8 +349,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1BCAE2F24CC7C1100BEEB26 /* hardClick.aiff in Resources */,
-				B1BCAE2D24CC7C1100BEEB26 /* softClick.aiff in Resources */,
 				B1BCAE0824CC7B5B00BEEB26 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,7 +360,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B16F359B24CC9D0300F045C1 /* Set.swift in Sources */,
+				B16F359224CC94A900F045C1 /* UserInterface.swift in Sources */,
+				B16F358F24CC93EC00F045C1 /* NumberView.swift in Sources */,
+				B16F359524CC98E100F045C1 /* NotesView.swift in Sources */,
+				B1BCAE3124CC844700BEEB26 /* Frame.swift in Sources */,
 				B1BCAE0524CC7B5B00BEEB26 /* ContentView.swift in Sources */,
+				B168C2EB24CC86CD00FFE4A1 /* LinearGradient.swift in Sources */,
+				B168C2F324CC897200FFE4A1 /* iOS_View.swift in Sources */,
 				B1BCAE0324CC7B5B00BEEB26 /* SudoguApp.swift in Sources */,
 				B1BCAE2024CC7BD800BEEB26 /* Value.swift in Sources */,
 				B1BCAE1C24CC7BD800BEEB26 /* Dimensions.swift in Sources */,
@@ -287,6 +375,7 @@
 				B1BCAE2624CC7BD800BEEB26 /* Color.swift in Sources */,
 				B1BCAE2224CC7BD800BEEB26 /* Cell.swift in Sources */,
 				B1BCAE2424CC7BD800BEEB26 /* Sudoku.swift in Sources */,
+				B16F358B24CC938000F045C1 /* MainPanel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,7 +383,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B16F359C24CC9D0300F045C1 /* Set.swift in Sources */,
+				B16F359324CC94A900F045C1 /* UserInterface.swift in Sources */,
+				B16F359024CC93EC00F045C1 /* NumberView.swift in Sources */,
+				B16F359624CC98E100F045C1 /* NotesView.swift in Sources */,
+				B1BCAE3224CC845000BEEB26 /* Frame.swift in Sources */,
 				B1BCAE0624CC7B5B00BEEB26 /* ContentView.swift in Sources */,
+				B168C2EC24CC86CD00FFE4A1 /* LinearGradient.swift in Sources */,
+				B1473D6E24CCA6D300584F88 /* CellView.swift in Sources */,
+				B168C2F524CC89B900FFE4A1 /* macOS_View.swift in Sources */,
 				B1BCAE0424CC7B5B00BEEB26 /* SudoguApp.swift in Sources */,
 				B1BCAE2124CC7BD800BEEB26 /* Value.swift in Sources */,
 				B1BCAE1D24CC7BD800BEEB26 /* Dimensions.swift in Sources */,
@@ -302,6 +399,7 @@
 				B1BCAE2724CC7BD800BEEB26 /* Color.swift in Sources */,
 				B1BCAE2324CC7BD800BEEB26 /* Cell.swift in Sources */,
 				B1BCAE2524CC7BD800BEEB26 /* Sudoku.swift in Sources */,
+				B16F358C24CC938000F045C1 /* MainPanel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

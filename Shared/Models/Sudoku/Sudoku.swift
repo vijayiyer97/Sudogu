@@ -1,6 +1,6 @@
 //
 //  Sudoku.swift
-//  Sudogu
+//  Shared
 //
 //  Created by Vijay Iyer on 7/24/20.
 //  Copyright © 2020 Vijay Iyer. All rights reserved.
@@ -50,6 +50,14 @@ final class Sudoku: ObservableObject {
     var cacheSize: Int = 25
     
     // MARK: Initializers
+    /// Initializes a `Sudoku` instance from a validated set of values and dimensions.
+    /// - Parameter values: The validated set of values of the sudoku.
+    /// - Parameter dimensions: The validated dimensions of the sudoku.
+    private init(values: Board, dimensions: Dimensions) {
+        self.values = values
+        self.dimensions = dimensions
+    }
+    
     /// Initializes a  `Sudoku` from another instance.
     /// - Parameter other: Another `Sudoku` instance.
     init(from other: Sudoku) {
@@ -57,9 +65,9 @@ final class Sudoku: ObservableObject {
         dimensions = other.dimensions
     }
     
-    /// Initializes a `Sudoku` from a given board and dimensions.
+    /// Initializes a `Sudoku` from a given board and validated dimensions.
     /// - Parameter values: The board of the sudoku.
-    /// - Parameter dimensions: The dimensions of the sudoku regions.
+    /// - Parameter dimensions: The validated dimensions of the sudoku regions.
     init?(values: [[Int?]], dimensions: Dimensions) {
         // validate input dimensions.
         let size = dimensions.cells, rows = dimensions.rows
@@ -100,10 +108,16 @@ final class Sudoku: ObservableObject {
         self.init(values: values, dimensions: dimensions)
     }
     
+    subscript(index: Int) -> [Cell] {
+        var values = [Cell]()
+        for i in index*size..<(index + 1)*size {
+            values.append(self.values[i])
+        }
+        return values
+    }
 }
 
-// MARK: Extensions
-/// Extends `Sudoku` with static properties.
+// MARK: Static Properties
 extension Sudoku {
     /// The default `Sudoku` to load.
     static let `default`: Sudoku = Sudoku(values: [
@@ -122,22 +136,16 @@ extension Sudoku {
     /// The file name for encoding and decoding `Sodoku`.
     static let file: String = "sudogu.json"
 }
-/// Extends `Sudoku` with computed properties and nested structures.
+
+// MARK: Computed Properties
 extension Sudoku {
-    // MARK: Computed Properties
     /// The size of the sudoku.
     var size: Int { dimensions.cells }
     /// The number of cells contained in the sudoku.
     var cells: Int { size * size }
 }
 
-// MARK: Codable Conformance
-
-enum CodingKeys: String, CodingKey {
-    case values
-    case dimensions
-}
-
+// MARK: Hashable Protocol Conformance
 extension Sudoku: Hashable {
     public static func == (lhs: Sudoku, rhs: Sudoku) -> Bool {
         return lhs.values == rhs.values && lhs.dimensions == rhs.dimensions
@@ -146,5 +154,26 @@ extension Sudoku: Hashable {
     public func hash(into hasher: inout Hasher) {
         hasher.combine(values)
         hasher.combine(dimensions)
+    }
+}
+
+// MARK: Codable Protocol Conformance
+extension Sudoku: Codable {
+    enum CodingKeys: String, CodingKey {
+        case values
+        case dimensions
+    }
+    
+    convenience init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        let values = try container.decode(Board.self, forKey: .values)
+        let dimensions = try container.decode(Dimensions.self, forKey: .dimensions)
+        self.init(values: values, dimensions: dimensions)
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(self.values, forKey: .values)
+        try container.encode(self.dimensions, forKey: .dimensions)
     }
 }

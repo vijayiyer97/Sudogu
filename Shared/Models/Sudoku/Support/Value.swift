@@ -1,6 +1,6 @@
 //
 //  Value.swift
-//  Sudogu
+//  Shared
 //
 //  Created by Vijay Iyer on 7/24/20.
 //  Copyright © 2020 Vijay Iyer. All rights reserved.
@@ -34,31 +34,37 @@ struct Value {
     }
 }
 
-// MARK: Extensions
-/// Extends `Value` with computed properties and nested structures.
+// MARK: Encapsulated Types
 extension Value {
-    // MARK: Nested Structures
     /**
      Enumerates the states of the value.
      */
     enum State: String, CaseIterable {
+        /// The default state.
+        static let `default`: State = .value
+        
+        /// A state of a user value
+        case value
+        /// A state of a user note
+        case note
         /// A state of a known value.
         case given
         /// A state of a artificially solved value.
         case solved
         /// A state of a highlighted note.
         case focused
-        /// The default state.
-        case `default`
         /// A state of a nullified note.
         case null
     }
-    
-    // MARK: Computed Properties
+}
+// MARK: Computed Properties
+extension Value {
     /// The foreground color assigned to the value.
     var color: Color {
         switch state {
-        case .default:
+        case .value:
+            return .text
+        case .note:
             return .text
         case .given:
             return .text
@@ -67,12 +73,12 @@ extension Value {
         case .focused:
             return .blue
         case .null:
-            return .complementary2
+            return .complementary3
         }
     }
 }
 
-/// Extends `Value.State` with `Codable` protocol conformance.
+// MARK: Codable Protocol Conformance
 extension Value.State: Codable {
     private enum Key: CodingKey {
         case rawValue
@@ -95,7 +101,6 @@ extension Value.State: Codable {
         try container.encode(self.rawValue, forKey: .rawValue)
     }
 }
-/// Extends `Value` with `Codable` protocol conformance.
 extension Value: Codable {
     private enum CodingKeys: String, CodingKey {
         case rawValue
@@ -115,7 +120,8 @@ extension Value: Codable {
         try container.encode(self.state, forKey: .state)
     }
 }
-/// Extends `Value` with `Hashable` protocol conformance.
+
+// MARK: Hashable Protocol Conformance
 extension Value: Hashable {
     static func ==(lhs: Value, rhs: Value) -> Bool {
         return lhs.rawValue == rhs.rawValue
@@ -123,5 +129,25 @@ extension Value: Hashable {
     
     func hash(into hasher: inout Hasher) {
         hasher.combine(rawValue)
+    }
+}
+
+// MARK: Comparable Protocol Conformance
+extension Value: Strideable {
+    typealias Stride = Int
+    
+    func distance(to other: Value) -> Stride {
+        return other.rawValue - self.rawValue
+    }
+    
+    func advanced(by n: Stride) -> Value {
+        return Value(self.rawValue + n, state: self.state)
+    }
+}
+
+// MARK: CustomStringConvertible Protocol Conformance
+extension Value: CustomStringConvertible {
+    var description: String {
+        return "\(rawValue)"
     }
 }

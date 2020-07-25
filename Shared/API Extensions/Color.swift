@@ -1,6 +1,6 @@
 //
 //  Color.swift
-//  Sudogu
+//  Shared
 //
 //  Created by Vijay Iyer on 7/24/20.
 //  Copyright © 2020 Vijay Iyer. All rights reserved.
@@ -8,6 +8,9 @@
 
 import SwiftUI
 
+// MARK: Color
+
+// MARK: Static Properties
 extension Color {
     static let border = Color("Border")
     

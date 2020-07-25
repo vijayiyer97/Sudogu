@@ -1,6 +1,6 @@
 //
 //  Dimensions.swift
-//  Sudogu
+//  Shared
 //
 //  Created by Vijay Iyer on 7/24/20.
 //  Copyright © 2020 Vijay Iyer. All rights reserved.
@@ -32,16 +32,10 @@ struct Dimensions {
     
 }
 
-// MARK: Extensions
-/// Extends `Dimensions` with static properties.
+// MARK: Encapsulated Types
+/// Specifies lower and upper bounds for the number of rows and number of columns in a box.
+/// Minimum = 2, maximum = 5.
 extension Dimensions {
-    static let `default`: Dimensions = Dimensions(rows: 3, columns: 3)!
-}
-/// Extends `Dimensions` with computed properties and nested structures.
-extension Dimensions {
-    // MARK: Nested Structures
-    /// Specifies lower and upper bounds for the number of rows and number of columns in a box.
-    /// Minimum = 2, maximum = 5.
     enum Bounds {
         // MARK: Static Properties
         private static let max = 5 // The maximum value
@@ -53,12 +47,23 @@ extension Dimensions {
         /// Maximum number of cells in a box.
         static let maxCells = max*max
     }
-    
-    // MARK: Computed properties
+}
+
+// MARK: Static Properties
+extension Dimensions {
+    static let `default`: Dimensions = Dimensions(rows: 3, columns: 3)!
+}
+
+// MARK: Computed Properties
+extension Dimensions {
     /// The number of cells in a region = rows * columns.
     var cells: Int {
         rows * columns
     }
 }
-/// Extends `Dimensions` with `Hashable`and `Codable` protocol conformance.
-extension Dimensions: Hashable, Codable { }
+
+// MARK: Hashable Protocol Conformance
+extension Dimensions: Hashable { }
+
+// MARK: Codable Protocol Conformance
+extension Dimensions: Codable { }
