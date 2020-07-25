@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  Sudogu
+//  Shared
 //
 //  Created by Vijay Iyer on 7/25/20.
 //
