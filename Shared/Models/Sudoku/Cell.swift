@@ -1,6 +1,6 @@
 //
 //  Cell.swift
-//  Shared
+//  Sudogu
 //
 //  Created by Vijay Iyer on 7/24/20.
 //  Copyright © 2020 Vijay Iyer. All rights reserved.
@@ -21,7 +21,7 @@ import SwiftUI
  * A descriptive state
  * The background color
  */
-final class Cell: ObservableObject {
+public final class Cell: ObservableObject {
     /// A typealias for the candidate set.
     typealias Candidates = Set<Value>
     
@@ -39,11 +39,11 @@ final class Cell: ObservableObject {
     /// The location data for the cell. Data is separated into three categories: row, column, and region.
     @Published var location: Location
     /// Data regarding the frame of the cell within its view.
-    //@Published var frame: Frame = Frame()
+    @Published var frame: Frame = Frame()
     
     // MARK: Stored Properties
     /// Flag for whether the cell controls view focus.
-    var focused: Bool = false
+    var inFocus: Bool = false
     /// Stores the state of the cell.
     /// The state controls view behavior and functionality.
     var state: State
@@ -177,11 +177,11 @@ extension Cell.State: Codable {
     }
 }
 extension Cell: Hashable {
-    static func == (lhs: Cell, rhs: Cell) -> Bool {
+    public static func == (lhs: Cell, rhs: Cell) -> Bool {
         return lhs.location == rhs.location && lhs.value == rhs.value && lhs.candidates == rhs.candidates
     }
     
-    func hash(into hasher: inout Hasher) {
+    public func hash(into hasher: inout Hasher) {
         hasher.combine(location)
         hasher.combine(value)
         hasher.combine(candidates)
@@ -198,7 +198,7 @@ extension Cell: Codable {
         case location
     }
     
-    convenience init(from decoder: Decoder) throws {
+    public convenience init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         let value = try container.decode(Value?.self, forKey: .value)
         let candidates = try container.decode(Candidates.self, forKey: .candidates)
@@ -207,7 +207,7 @@ extension Cell: Codable {
         self.init(state: state, value: value, candidates: candidates, location: location)
     }
     
-    func encode(to encoder: Encoder) throws {
+    public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(self.value, forKey: .value)
         try container.encode(self.candidates, forKey: .candidates)

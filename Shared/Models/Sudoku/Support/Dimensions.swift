@@ -1,6 +1,6 @@
 //
 //  Dimensions.swift
-//  Shared
+//  Sudogu
 //
 //  Created by Vijay Iyer on 7/24/20.
 //  Copyright © 2020 Vijay Iyer. All rights reserved.
@@ -10,7 +10,7 @@
 /**
  Dimensions of a sudoku box. Specifies the number of rows and columns.
  */
-struct Dimensions {
+public struct Dimensions {
     
     // MARK: Stored properties
     /// Region dimension, constrained by `Dimensions.Bounds`.

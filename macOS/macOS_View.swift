@@ -1,6 +1,6 @@
 //
 //  macOS_View.swift
-//  macOS
+//  Sudogu (macOS)
 //
 //  Created by Vijay Iyer on 7/25/20.
 //

@@ -1,6 +1,6 @@
 //
 //  Value.swift
-//  Shared
+//  Sudogu
 //
 //  Created by Vijay Iyer on 7/24/20.
 //  Copyright © 2020 Vijay Iyer. All rights reserved.

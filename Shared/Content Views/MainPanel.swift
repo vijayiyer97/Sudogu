@@ -1,6 +1,6 @@
 //
 //  MainPanel.swift
-//  Shared
+//  Sudogu
 //
 //  Created by Vijay Iyer on 7/25/20.
 //
@@ -8,13 +8,42 @@
 import SwiftUI
 
 struct MainPanel: View {
+    @EnvironmentObject var sudoku: Sudoku
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        board
     }
-}
-
-struct MainPanel_Previews: PreviewProvider {
-    static var previews: some View {
-        MainPanel()
+    
+    private var board: some View {
+        ZStack {
+            GeometryReader { proxy in
+                BoardView()
+                .onAppear {
+                    let frame = proxy.frame(in: .named("Sudoku"))
+                    let center = CGPoint(x: frame.midX, y: frame.midY)
+                    
+                    sudoku.frame.width = frame.width
+                    sudoku.frame.height = frame.height
+                    sudoku.frame.center = center
+                    
+                    sudoku.frame.offset.max = CGSize(width: proxy.size.width*0.5, height: proxy.size.height*0.5)
+                    sudoku.frame.offset.min = CGSize(width: -proxy.size.width*0.5, height: -proxy.size.height*0.5)
+                    
+                    sudoku.frame.scale.max = CGFloat(sudoku.size/3)
+                    sudoku.frame.scale.min = 0.95
+                    
+                    sudoku.frame.scale.value = 0.95
+                    
+                }
+                .mask(
+                    Rectangle()
+                        .foregroundColor(.none)
+                        .cornerRadius(25)
+                )
+            }
+        }
+        .aspectRatio(1, contentMode: .fill)
+//        .scaleEffect(0.8)
+        .coordinateSpace(name: "Sudoku")
     }
 }

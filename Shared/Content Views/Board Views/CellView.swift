@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  CellView.swift
 //  Sudogu
 //
 //  Created by Vijay Iyer on 7/25/20.
@@ -7,23 +7,28 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct CellView: View {
+    var index: Int
+    
     var body: some View {
         #if os(iOS)
-        iOS_View()
+        CellView_iOS(index: index)
         #elseif os(macOS)
-        macOS_View()
+        CellView_macOS()
         #endif
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct CellView_Previews: PreviewProvider {
     static let sudoku: Sudoku = Sudoku.shared
     static let ui: UserInterface = UserInterface()
-    
+    static let index: Int = 0
     static var previews: some View {
-        ContentView()
+        CellView(index: index)
             .environmentObject(sudoku)
             .environmentObject(ui)
+            .onAppear {
+                sudoku.values[index].state = .immutable
+            }
     }
 }

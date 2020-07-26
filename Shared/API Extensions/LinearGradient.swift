@@ -1,6 +1,6 @@
 //
 //  LinearGradient.swift
-//  Shared
+//  Sudogu
 //
 //  Created by Vijay Iyer on 7/25/20.
 //

@@ -1,14 +1,14 @@
 //
-//  Sudoku.swift
-//  Shared
+//  Sudoku+CoreDataClass.swift
+//  Sudogu
 //
-//  Created by Vijay Iyer on 7/24/20.
-//  Copyright © 2020 Vijay Iyer. All rights reserved.
+//  Created by Vijay Iyer on 7/26/20.
+//
 //
 
-import SwiftUI
+import Foundation
+import CoreData
 
-// MARK: Sudoku
 /**
  A traditional sudoku consisting of rows, columns and regions which encapsulate cells.
  
@@ -38,17 +38,35 @@ import SwiftUI
 final class Sudoku: ObservableObject {
     /// A typealias for representing the sudoku board.
     typealias Board = [Cell]
+
+    // MARK: Published Properties
+    @Published var frame: Frame = Frame()
     
+    // MARK: Static Properties
+    public static let shared: Sudoku = Sudoku(values: [
+        [ 5 , 3 , 4 ,   nil,nil, 8 ,    nil, 1 ,nil],
+        [nil,nil,nil,   nil,nil, 2 ,    nil, 9 ,nil],
+        [nil,nil,nil,   nil,nil, 7 ,     6 ,nil, 4 ],
+        
+        [nil,nil,nil,    5 ,nil,nil,     1 ,nil,nil],
+        [ 1 ,nil,nil,   nil,nil,nil,    nil,nil, 3 ],
+        [nil,nil, 9,    nil,nil, 1 ,    nil,nil,nil],
+        
+        [ 3 ,nil, 5 ,    4 ,nil,nil,    nil,nil,nil],
+        [nil, 8 ,nil,    2 ,nil,nil,    nil,nil,nil],
+        [nil, 6 ,nil,    7 ,nil,nil,     3 , 8 , 2 ],
+    ], dimensions: Dimensions.default)!
+
     // MARK: Stored Properties
     /// The values of a sudoku.
-    var values: Board
+    private(set) var values: Board
     /// The dimensions of a region.
-    var dimensions: Dimensions
+    private(set) var dimensions: Dimensions
     /// The cache store.
-    var cache: [Board] = []
+    private(set) var cache: [Board] = []
     /// The maximum size for the cache.
-    var cacheSize: Int = 25
-    
+    private(set) var cacheSize: Int = 25
+
     // MARK: Initializers
     /// Initializes a `Sudoku` instance from a validated set of values and dimensions.
     /// - Parameter values: The validated set of values of the sudoku.
@@ -57,14 +75,14 @@ final class Sudoku: ObservableObject {
         self.values = values
         self.dimensions = dimensions
     }
-    
+
     /// Initializes a  `Sudoku` from another instance.
     /// - Parameter other: Another `Sudoku` instance.
     init(from other: Sudoku) {
         values = other.values
         dimensions = other.dimensions
     }
-    
+
     /// Initializes a `Sudoku` from a given board and validated dimensions.
     /// - Parameter values: The board of the sudoku.
     /// - Parameter dimensions: The validated dimensions of the sudoku regions.
@@ -72,14 +90,14 @@ final class Sudoku: ObservableObject {
         // validate input dimensions.
         let size = dimensions.cells, rows = dimensions.rows
         guard values.count == size else { return nil }
-        
+
         for row in values {
             guard row.count == size else { return nil }
         }
         var rowValues = [Set<Int>](repeating: Set<Int>(), count: size)
         var columnValues = [Set<Int>](repeating: Set<Int>(), count: size)
         var regionValues = [Set<Int>](repeating: Set<Int>(), count: size)
-        
+
         var cells = Board()
         for row in 0..<size{
             for col in 0..<size {
@@ -94,11 +112,11 @@ final class Sudoku: ObservableObject {
                 cells.append(cell)
             }
         }
-        
+
         self.dimensions = dimensions
         self.values = cells
     }
-    
+
     /// Initializes a `Sudoku` from a given board and dimensions.
     /// - Parameter values: The board of the sudoku.
     /// - Parameter rows: The rows in a region.
@@ -107,7 +125,7 @@ final class Sudoku: ObservableObject {
         guard let dimensions = Dimensions(rows: rows, columns: columns) else { return nil }
         self.init(values: values, dimensions: dimensions)
     }
-    
+
     subscript(index: Int) -> [Cell] {
         var values = [Cell]()
         for i in index*size..<(index + 1)*size {
@@ -115,26 +133,6 @@ final class Sudoku: ObservableObject {
         }
         return values
     }
-}
-
-// MARK: Static Properties
-extension Sudoku {
-    /// The default `Sudoku` to load.
-    static let `default`: Sudoku = Sudoku(values: [
-        [ 5 , 3 , 4 ,   nil,nil, 8 ,    nil, 1 ,nil],
-        [nil,nil,nil,   nil,nil, 2 ,    nil, 9 ,nil],
-        [nil,nil,nil,   nil,nil, 7 ,     6 ,nil, 4 ],
-        
-        [nil,nil,nil,    5 ,nil,nil,     1 ,nil,nil],
-        [ 1 ,nil,nil,   nil,nil,nil,    nil,nil, 3 ],
-        [nil,nil, 9,    nil,nil, 1 ,    nil,nil,nil],
-        
-        [ 3 ,nil, 5 ,    4 ,nil,nil,    nil,nil,nil],
-        [nil, 8 ,nil,    2 ,nil,nil,    nil,nil,nil],
-        [nil, 6 ,nil,    7 ,nil,nil,     3 , 8 , 2 ],
-    ], dimensions: Dimensions.default)!
-    /// The file name for encoding and decoding `Sodoku`.
-    static let file: String = "sudogu.json"
 }
 
 // MARK: Computed Properties
@@ -150,7 +148,7 @@ extension Sudoku: Hashable {
     public static func == (lhs: Sudoku, rhs: Sudoku) -> Bool {
         return lhs.values == rhs.values && lhs.dimensions == rhs.dimensions
     }
-    
+
     public func hash(into hasher: inout Hasher) {
         hasher.combine(values)
         hasher.combine(dimensions)
@@ -163,15 +161,15 @@ extension Sudoku: Codable {
         case values
         case dimensions
     }
-    
-    convenience init(from decoder: Decoder) throws {
+
+    public convenience init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         let values = try container.decode(Board.self, forKey: .values)
         let dimensions = try container.decode(Dimensions.self, forKey: .dimensions)
         self.init(values: values, dimensions: dimensions)
     }
-    
-    func encode(to encoder: Encoder) throws {
+
+    public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(self.values, forKey: .values)
         try container.encode(self.dimensions, forKey: .dimensions)

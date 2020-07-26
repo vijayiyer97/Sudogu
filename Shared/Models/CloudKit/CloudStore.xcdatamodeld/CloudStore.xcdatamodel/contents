@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17175" systemVersion="20A5323l" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="Entry" representedClassName="Entry" syncable="YES" codeGenerationType="class">
+        <relationship name="puzzle" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Puzzle" inverseName="entry" inverseEntity="Puzzle"/>
+        <relationship name="solution" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Solution" inverseName="entry" inverseEntity="Solution"/>
+        <relationship name="store" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Store" inverseName="entries" inverseEntity="Store"/>
+    </entity>
+    <entity name="Puzzle" representedClassName="Puzzle" syncable="YES" codeGenerationType="class">
+        <attribute name="difficulty" attributeType="String" defaultValueString="Beginner"/>
+        <attribute name="value" optional="YES" attributeType="Integer 64" minValueString="1" maxValueString="9" usesScalarValueType="YES"/>
+        <relationship name="entry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Entry" inverseName="puzzle" inverseEntity="Entry"/>
+    </entity>
+    <entity name="Solution" representedClassName="Solution" syncable="YES" codeGenerationType="class">
+        <attribute name="difficulty" attributeType="String" defaultValueString="Beginner"/>
+        <attribute name="id" attributeType="Integer 64" minValueString="0" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="value" attributeType="Integer 64" minValueString="1" maxValueString="9" defaultValueString="1" usesScalarValueType="YES"/>
+        <relationship name="entry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Entry" inverseName="solution" inverseEntity="Entry"/>
+    </entity>
+    <entity name="Store" representedClassName="Store" syncable="YES" codeGenerationType="class">
+        <relationship name="entries" optional="YES" toMany="YES" minCount="1" deletionRule="Cascade" destinationEntity="Entry" inverseName="store" inverseEntity="Entry"/>
+    </entity>
+    <elements>
+        <element name="Puzzle" positionX="-66.38018798828125" positionY="-218.2088623046875" width="128" height="88"/>
+        <element name="Solution" positionX="-53.897705078125" positionY="59.5859375" width="128" height="103"/>
+        <element name="Store" positionX="-45" positionY="-45" width="128" height="44"/>
+        <element name="Entry" positionX="-9" positionY="-9" width="128" height="74"/>
+    </elements>
+</model>

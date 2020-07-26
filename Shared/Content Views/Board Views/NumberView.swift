@@ -1,6 +1,6 @@
 //
 //  NumberView.swift
-//  Shared
+//  Sudogu
 //
 //  Created by Vijay Iyer on 7/25/20.
 //
@@ -21,7 +21,7 @@ struct NumberView: View {
     var body: some View {
         if let value = value {
             Text(String(describing: value))
-                .font(.system(size: 30, weight: .medium, design: .rounded))
+                .font(.system(size: 50, weight: .medium, design: .rounded))
                 .scaleEffect(scale)
                 .foregroundColor(foregroundColor ?? .text)
         }

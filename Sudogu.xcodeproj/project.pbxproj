@@ -7,6 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B100EA5D24CD147500B3977D /* SubPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B100EA5C24CD147500B3977D /* SubPanel.swift */; };
+		B100EA5E24CD147500B3977D /* SubPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B100EA5C24CD147500B3977D /* SubPanel.swift */; };
+		B100EA6024CD15A400B3977D /* NeumorphicPrimitveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B100EA5F24CD15A400B3977D /* NeumorphicPrimitveButton.swift */; };
+		B100EA6124CD15A400B3977D /* NeumorphicPrimitveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B100EA5F24CD15A400B3977D /* NeumorphicPrimitveButton.swift */; };
+		B100EA6324CD164500B3977D /* Neumorphism.swift in Sources */ = {isa = PBXBuildFile; fileRef = B100EA6224CD164500B3977D /* Neumorphism.swift */; };
+		B100EA6424CD164500B3977D /* Neumorphism.swift in Sources */ = {isa = PBXBuildFile; fileRef = B100EA6224CD164500B3977D /* Neumorphism.swift */; };
+		B100EA6624CD16EB00B3977D /* HapticEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B100EA6524CD16EB00B3977D /* HapticEngine.swift */; };
+		B100EA6924CD1E5900B3977D /* VolumeObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = B100EA6824CD1E5900B3977D /* VolumeObserver.swift */; };
+		B100EA6A24CD1E5900B3977D /* VolumeObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = B100EA6824CD1E5900B3977D /* VolumeObserver.swift */; };
+		B12AD97924CDC8AD00536B1B /* PersistentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12AD97824CDC8AD00536B1B /* PersistentStore.swift */; };
+		B12AD97A24CDC8AD00536B1B /* PersistentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12AD97824CDC8AD00536B1B /* PersistentStore.swift */; };
+		B12AD9A024CDE0B200536B1B /* CloudStore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B12AD99E24CDE0B200536B1B /* CloudStore.xcdatamodeld */; };
+		B12AD9A124CDE0B200536B1B /* CloudStore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B12AD99E24CDE0B200536B1B /* CloudStore.xcdatamodeld */; };
+		B12F19B424CD040000CF5695 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12F19B324CD040000CF5695 /* BoardView.swift */; };
+		B12F19B524CD040000CF5695 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12F19B324CD040000CF5695 /* BoardView.swift */; };
+		B12F19B724CD056B00CF5695 /* EdgeSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12F19B624CD056B00CF5695 /* EdgeSet.swift */; };
+		B12F19B824CD056B00CF5695 /* EdgeSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12F19B624CD056B00CF5695 /* EdgeSet.swift */; };
+		B12F19BA24CD061D00CF5695 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12F19B924CD061D00CF5695 /* View.swift */; };
+		B12F19BB24CD061D00CF5695 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12F19B924CD061D00CF5695 /* View.swift */; };
 		B1473D6E24CCA6D300584F88 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1473D6A24CCA0AA00584F88 /* CellView.swift */; };
 		B168C2EB24CC86CD00FFE4A1 /* LinearGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B168C2EA24CC86CD00FFE4A1 /* LinearGradient.swift */; };
 		B168C2EC24CC86CD00FFE4A1 /* LinearGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B168C2EA24CC86CD00FFE4A1 /* LinearGradient.swift */; };
@@ -22,6 +41,13 @@
 		B16F359624CC98E100F045C1 /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16F359424CC98E100F045C1 /* NotesView.swift */; };
 		B16F359B24CC9D0300F045C1 /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16F359A24CC9D0300F045C1 /* Set.swift */; };
 		B16F359C24CC9D0300F045C1 /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16F359A24CC9D0300F045C1 /* Set.swift */; };
+		B1A77A6E24CCE82200E5BC97 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1473D6A24CCA0AA00584F88 /* CellView.swift */; };
+		B1A77A7124CCEB8300E5BC97 /* CellView_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A77A6F24CCEAD100E5BC97 /* CellView_macOS.swift */; };
+		B1A77A7324CCEB9E00E5BC97 /* CellView_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A77A7224CCEB9E00E5BC97 /* CellView_iOS.swift */; };
+		B1A77A7524CCF49600E5BC97 /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A77A7424CCF49600E5BC97 /* CGPoint.swift */; };
+		B1A77A7624CCF4D900E5BC97 /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A77A7424CCF49600E5BC97 /* CGPoint.swift */; };
+		B1A77A7B24CCF5D900E5BC97 /* MultiGestureButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A77A7A24CCF5D900E5BC97 /* MultiGestureButton.swift */; };
+		B1A77A7C24CCF5D900E5BC97 /* MultiGestureButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A77A7A24CCF5D900E5BC97 /* MultiGestureButton.swift */; };
 		B1BCAE0324CC7B5B00BEEB26 /* SudoguApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BCADF024CC7B5A00BEEB26 /* SudoguApp.swift */; };
 		B1BCAE0424CC7B5B00BEEB26 /* SudoguApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BCADF024CC7B5A00BEEB26 /* SudoguApp.swift */; };
 		B1BCAE0524CC7B5B00BEEB26 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BCADF124CC7B5A00BEEB26 /* ContentView.swift */; };
@@ -36,17 +62,27 @@
 		B1BCAE2124CC7BD800BEEB26 /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BCAE1524CC7BD800BEEB26 /* Value.swift */; };
 		B1BCAE2224CC7BD800BEEB26 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BCAE1724CC7BD800BEEB26 /* Cell.swift */; };
 		B1BCAE2324CC7BD800BEEB26 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BCAE1724CC7BD800BEEB26 /* Cell.swift */; };
-		B1BCAE2424CC7BD800BEEB26 /* Sudoku.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BCAE1824CC7BD800BEEB26 /* Sudoku.swift */; };
-		B1BCAE2524CC7BD800BEEB26 /* Sudoku.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BCAE1824CC7BD800BEEB26 /* Sudoku.swift */; };
 		B1BCAE2624CC7BD800BEEB26 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BCAE1B24CC7BD800BEEB26 /* Color.swift */; };
 		B1BCAE2724CC7BD800BEEB26 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BCAE1B24CC7BD800BEEB26 /* Color.swift */; };
 		B1BCAE2C24CC7C1100BEEB26 /* softClick.aiff in Resources */ = {isa = PBXBuildFile; fileRef = B1BCAE2A24CC7C1100BEEB26 /* softClick.aiff */; };
 		B1BCAE2E24CC7C1100BEEB26 /* hardClick.aiff in Resources */ = {isa = PBXBuildFile; fileRef = B1BCAE2B24CC7C1100BEEB26 /* hardClick.aiff */; };
 		B1BCAE3124CC844700BEEB26 /* Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BCAE3024CC844700BEEB26 /* Frame.swift */; };
 		B1BCAE3224CC845000BEEB26 /* Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BCAE3024CC844700BEEB26 /* Frame.swift */; };
+		B1C6B08C24CDE55700377655 /* Sudoku.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C6B08A24CDE55700377655 /* Sudoku.swift */; };
+		B1C6B08D24CDE55700377655 /* Sudoku.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C6B08A24CDE55700377655 /* Sudoku.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B100EA5C24CD147500B3977D /* SubPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubPanel.swift; sourceTree = "<group>"; };
+		B100EA5F24CD15A400B3977D /* NeumorphicPrimitveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphicPrimitveButton.swift; sourceTree = "<group>"; };
+		B100EA6224CD164500B3977D /* Neumorphism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Neumorphism.swift; sourceTree = "<group>"; };
+		B100EA6524CD16EB00B3977D /* HapticEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticEngine.swift; sourceTree = "<group>"; };
+		B100EA6824CD1E5900B3977D /* VolumeObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeObserver.swift; sourceTree = "<group>"; };
+		B12AD97824CDC8AD00536B1B /* PersistentStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentStore.swift; sourceTree = "<group>"; };
+		B12AD99F24CDE0B200536B1B /* CloudStore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CloudStore.xcdatamodel; sourceTree = "<group>"; };
+		B12F19B324CD040000CF5695 /* BoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
+		B12F19B624CD056B00CF5695 /* EdgeSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeSet.swift; sourceTree = "<group>"; };
+		B12F19B924CD061D00CF5695 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		B1473D6A24CCA0AA00584F88 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
 		B168C2EA24CC86CD00FFE4A1 /* LinearGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearGradient.swift; sourceTree = "<group>"; };
 		B168C2F024CC890800FFE4A1 /* iOS_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_View.swift; sourceTree = "<group>"; };
@@ -56,6 +92,10 @@
 		B16F359124CC94A900F045C1 /* UserInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInterface.swift; sourceTree = "<group>"; };
 		B16F359424CC98E100F045C1 /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
 		B16F359A24CC9D0300F045C1 /* Set.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Set.swift; sourceTree = "<group>"; };
+		B1A77A6F24CCEAD100E5BC97 /* CellView_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView_macOS.swift; sourceTree = "<group>"; };
+		B1A77A7224CCEB9E00E5BC97 /* CellView_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView_iOS.swift; sourceTree = "<group>"; };
+		B1A77A7424CCF49600E5BC97 /* CGPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPoint.swift; sourceTree = "<group>"; };
+		B1A77A7A24CCF5D900E5BC97 /* MultiGestureButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiGestureButton.swift; sourceTree = "<group>"; };
 		B1BCADF024CC7B5A00BEEB26 /* SudoguApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudoguApp.swift; sourceTree = "<group>"; };
 		B1BCADF124CC7B5A00BEEB26 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B1BCADF224CC7B5B00BEEB26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -68,11 +108,11 @@
 		B1BCAE1424CC7BD800BEEB26 /* Coordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
 		B1BCAE1524CC7BD800BEEB26 /* Value.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Value.swift; sourceTree = "<group>"; };
 		B1BCAE1724CC7BD800BEEB26 /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
-		B1BCAE1824CC7BD800BEEB26 /* Sudoku.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sudoku.swift; sourceTree = "<group>"; };
 		B1BCAE1B24CC7BD800BEEB26 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		B1BCAE2A24CC7C1100BEEB26 /* softClick.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = softClick.aiff; sourceTree = "<group>"; };
 		B1BCAE2B24CC7C1100BEEB26 /* hardClick.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = hardClick.aiff; sourceTree = "<group>"; };
 		B1BCAE3024CC844700BEEB26 /* Frame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Frame.swift; sourceTree = "<group>"; };
+		B1C6B08A24CDE55700377655 /* Sudoku.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sudoku.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +143,7 @@
 		B1473D6F24CCA6DD00584F88 /* ContentViews */ = {
 			isa = PBXGroup;
 			children = (
-				B1473D6A24CCA0AA00584F88 /* CellView.swift */,
+				B1A77A6F24CCEAD100E5BC97 /* CellView_macOS.swift */,
 			);
 			path = ContentViews;
 			sourceTree = "<group>";
@@ -112,6 +152,8 @@
 			isa = PBXGroup;
 			children = (
 				B16F358A24CC938000F045C1 /* MainPanel.swift */,
+				B100EA5C24CD147500B3977D /* SubPanel.swift */,
+				B1A77A7D24CCFAFB00E5BC97 /* Abstract Views */,
 				B16F358D24CC93A200F045C1 /* Board Views */,
 			);
 			path = "Content Views";
@@ -128,6 +170,7 @@
 		B168C2EF24CC88E200FFE4A1 /* Content Views */ = {
 			isa = PBXGroup;
 			children = (
+				B1A77A7224CCEB9E00E5BC97 /* CellView_iOS.swift */,
 			);
 			path = "Content Views";
 			sourceTree = "<group>";
@@ -135,10 +178,22 @@
 		B16F358D24CC93A200F045C1 /* Board Views */ = {
 			isa = PBXGroup;
 			children = (
+				B1473D6A24CCA0AA00584F88 /* CellView.swift */,
+				B12F19B324CD040000CF5695 /* BoardView.swift */,
 				B16F359424CC98E100F045C1 /* NotesView.swift */,
 				B16F358E24CC93EC00F045C1 /* NumberView.swift */,
 			);
 			path = "Board Views";
+			sourceTree = "<group>";
+		};
+		B1A77A7D24CCFAFB00E5BC97 /* Abstract Views */ = {
+			isa = PBXGroup;
+			children = (
+				B1A77A7A24CCF5D900E5BC97 /* MultiGestureButton.swift */,
+				B100EA5F24CD15A400B3977D /* NeumorphicPrimitveButton.swift */,
+				B100EA6224CD164500B3977D /* Neumorphism.swift */,
+			);
+			path = "Abstract Views";
 			sourceTree = "<group>";
 		};
 		B1BCADEA24CC7B5A00BEEB26 = {
@@ -200,6 +255,7 @@
 		B1BCAE1124CC7BD800BEEB26 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B1C6B09024CDEC0600377655 /* CloudKit */,
 				B1BCAE1624CC7BD800BEEB26 /* Sudoku */,
 				B16F359124CC94A900F045C1 /* UserInterface.swift */,
 			);
@@ -221,7 +277,7 @@
 			children = (
 				B1BCAE1224CC7BD800BEEB26 /* Support */,
 				B1BCAE1724CC7BD800BEEB26 /* Cell.swift */,
-				B1BCAE1824CC7BD800BEEB26 /* Sudoku.swift */,
+				B1C6B08A24CDE55700377655 /* Sudoku.swift */,
 			);
 			path = Sudoku;
 			sourceTree = "<group>";
@@ -230,6 +286,9 @@
 			isa = PBXGroup;
 			children = (
 				B1BCAE3024CC844700BEEB26 /* Frame.swift */,
+				B12F19B624CD056B00CF5695 /* EdgeSet.swift */,
+				B100EA6524CD16EB00B3977D /* HapticEngine.swift */,
+				B100EA6824CD1E5900B3977D /* VolumeObserver.swift */,
 			);
 			path = Wrappers;
 			sourceTree = "<group>";
@@ -237,9 +296,11 @@
 		B1BCAE1A24CC7BD800BEEB26 /* API Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B1A77A7424CCF49600E5BC97 /* CGPoint.swift */,
 				B1BCAE1B24CC7BD800BEEB26 /* Color.swift */,
 				B168C2EA24CC86CD00FFE4A1 /* LinearGradient.swift */,
 				B16F359A24CC9D0300F045C1 /* Set.swift */,
+				B12F19B924CD061D00CF5695 /* View.swift */,
 			);
 			path = "API Extensions";
 			sourceTree = "<group>";
@@ -259,6 +320,15 @@
 				B1BCAE2B24CC7C1100BEEB26 /* hardClick.aiff */,
 			);
 			path = Sounds;
+			sourceTree = "<group>";
+		};
+		B1C6B09024CDEC0600377655 /* CloudKit */ = {
+			isa = PBXGroup;
+			children = (
+				B12AD97824CDC8AD00536B1B /* PersistentStore.swift */,
+				B12AD99E24CDE0B200536B1B /* CloudStore.xcdatamodeld */,
+			);
+			path = CloudKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,21 +430,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B12F19B424CD040000CF5695 /* BoardView.swift in Sources */,
+				B1A77A7324CCEB9E00E5BC97 /* CellView_iOS.swift in Sources */,
 				B16F359B24CC9D0300F045C1 /* Set.swift in Sources */,
+				B12AD9A024CDE0B200536B1B /* CloudStore.xcdatamodeld in Sources */,
+				B100EA6324CD164500B3977D /* Neumorphism.swift in Sources */,
 				B16F359224CC94A900F045C1 /* UserInterface.swift in Sources */,
 				B16F358F24CC93EC00F045C1 /* NumberView.swift in Sources */,
 				B16F359524CC98E100F045C1 /* NotesView.swift in Sources */,
 				B1BCAE3124CC844700BEEB26 /* Frame.swift in Sources */,
 				B1BCAE0524CC7B5B00BEEB26 /* ContentView.swift in Sources */,
+				B1A77A7524CCF49600E5BC97 /* CGPoint.swift in Sources */,
+				B12F19BA24CD061D00CF5695 /* View.swift in Sources */,
 				B168C2EB24CC86CD00FFE4A1 /* LinearGradient.swift in Sources */,
+				B100EA5D24CD147500B3977D /* SubPanel.swift in Sources */,
+				B100EA6624CD16EB00B3977D /* HapticEngine.swift in Sources */,
+				B1C6B08C24CDE55700377655 /* Sudoku.swift in Sources */,
+				B1A77A6E24CCE82200E5BC97 /* CellView.swift in Sources */,
 				B168C2F324CC897200FFE4A1 /* iOS_View.swift in Sources */,
 				B1BCAE0324CC7B5B00BEEB26 /* SudoguApp.swift in Sources */,
 				B1BCAE2024CC7BD800BEEB26 /* Value.swift in Sources */,
 				B1BCAE1C24CC7BD800BEEB26 /* Dimensions.swift in Sources */,
+				B100EA6924CD1E5900B3977D /* VolumeObserver.swift in Sources */,
+				B100EA6024CD15A400B3977D /* NeumorphicPrimitveButton.swift in Sources */,
+				B12F19B724CD056B00CF5695 /* EdgeSet.swift in Sources */,
 				B1BCAE1E24CC7BD800BEEB26 /* Coordinate.swift in Sources */,
 				B1BCAE2624CC7BD800BEEB26 /* Color.swift in Sources */,
 				B1BCAE2224CC7BD800BEEB26 /* Cell.swift in Sources */,
-				B1BCAE2424CC7BD800BEEB26 /* Sudoku.swift in Sources */,
+				B12AD97924CDC8AD00536B1B /* PersistentStore.swift in Sources */,
+				B1A77A7B24CCF5D900E5BC97 /* MultiGestureButton.swift in Sources */,
 				B16F358B24CC938000F045C1 /* MainPanel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,22 +467,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B12F19B524CD040000CF5695 /* BoardView.swift in Sources */,
 				B16F359C24CC9D0300F045C1 /* Set.swift in Sources */,
 				B16F359324CC94A900F045C1 /* UserInterface.swift in Sources */,
+				B100EA6424CD164500B3977D /* Neumorphism.swift in Sources */,
+				B12AD97A24CDC8AD00536B1B /* PersistentStore.swift in Sources */,
+				B1A77A7124CCEB8300E5BC97 /* CellView_macOS.swift in Sources */,
 				B16F359024CC93EC00F045C1 /* NumberView.swift in Sources */,
 				B16F359624CC98E100F045C1 /* NotesView.swift in Sources */,
 				B1BCAE3224CC845000BEEB26 /* Frame.swift in Sources */,
 				B1BCAE0624CC7B5B00BEEB26 /* ContentView.swift in Sources */,
+				B1A77A7624CCF4D900E5BC97 /* CGPoint.swift in Sources */,
+				B12F19BB24CD061D00CF5695 /* View.swift in Sources */,
 				B168C2EC24CC86CD00FFE4A1 /* LinearGradient.swift in Sources */,
+				B100EA5E24CD147500B3977D /* SubPanel.swift in Sources */,
 				B1473D6E24CCA6D300584F88 /* CellView.swift in Sources */,
+				B12AD9A124CDE0B200536B1B /* CloudStore.xcdatamodeld in Sources */,
+				B100EA6A24CD1E5900B3977D /* VolumeObserver.swift in Sources */,
 				B168C2F524CC89B900FFE4A1 /* macOS_View.swift in Sources */,
 				B1BCAE0424CC7B5B00BEEB26 /* SudoguApp.swift in Sources */,
 				B1BCAE2124CC7BD800BEEB26 /* Value.swift in Sources */,
 				B1BCAE1D24CC7BD800BEEB26 /* Dimensions.swift in Sources */,
+				B100EA6124CD15A400B3977D /* NeumorphicPrimitveButton.swift in Sources */,
+				B1C6B08D24CDE55700377655 /* Sudoku.swift in Sources */,
+				B12F19B824CD056B00CF5695 /* EdgeSet.swift in Sources */,
 				B1BCAE1F24CC7BD800BEEB26 /* Coordinate.swift in Sources */,
 				B1BCAE2724CC7BD800BEEB26 /* Color.swift in Sources */,
 				B1BCAE2324CC7BD800BEEB26 /* Cell.swift in Sources */,
-				B1BCAE2524CC7BD800BEEB26 /* Sudoku.swift in Sources */,
+				B1A77A7C24CCF5D900E5BC97 /* MultiGestureButton.swift in Sources */,
 				B16F358C24CC938000F045C1 /* MainPanel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -641,6 +737,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B12AD99E24CDE0B200536B1B /* CloudStore.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B12AD99F24CDE0B200536B1B /* CloudStore.xcdatamodel */,
+			);
+			currentVersion = B12AD99F24CDE0B200536B1B /* CloudStore.xcdatamodel */;
+			path = CloudStore.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B1BCADEB24CC7B5A00BEEB26 /* Project object */;
 }

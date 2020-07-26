@@ -1,6 +1,6 @@
 //
 //  iOS_View.swift
-//  iOS
+//  Sudogu (iOS)
 //
 //  Created by Vijay Iyer on 7/25/20.
 //
@@ -8,13 +8,38 @@
 import SwiftUI
 
 struct iOS_View: View {
+    @EnvironmentObject var sudoku: Sudoku
+    @EnvironmentObject var ui: UserInterface
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack(alignment: .center, spacing: 0) {
+                MainPanel()
+                SubPanel()
+            }
+            .navigationBarHidden(false)
+            .background(background)
+        }
+    }
+    
+    private var background: some View {
+        NeumorphicBackground(shape: Rectangle())
+            .edgesIgnoringSafeArea(.all)
+            .onTapGesture {
+                withAnimation {
+                    ui.selection = nil
+                }
+            }
     }
 }
 
 struct iOS_View_Previews: PreviewProvider {
+    static let sudoku: Sudoku = Sudoku.shared
+    static let ui: UserInterface = UserInterface()
+    
     static var previews: some View {
         iOS_View()
+            .environmentObject(sudoku)
+            .environmentObject(ui)
     }
 }
