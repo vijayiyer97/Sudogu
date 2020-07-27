@@ -7,6 +7,7 @@
 
 // MARK: Set
 extension Set where Set.Element == Value {
+    /// Retrieves an element from the set if it exists, else returns `nil`.
     func get(value: Int) -> Value? {
         guard let index = firstIndex(of: Value(value)) else { return nil }
         

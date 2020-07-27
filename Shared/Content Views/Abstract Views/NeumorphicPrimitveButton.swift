@@ -96,10 +96,9 @@ private extension NeumorphicPrimitveButton {
 
             return configuration
                 .label
-                .padding(30)
-                .contentShape(shape)
                 .foregroundColor(isEnabled ? .blue : .gray)
                 .background(NeumorphicBackground(shape: shape, isHighlighted: isPressed))
+                .contentShape(shape)
                 .gesture(dragGesture)
         }
     }

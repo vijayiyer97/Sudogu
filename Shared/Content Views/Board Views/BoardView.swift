@@ -15,6 +15,7 @@ struct BoardView: View {
     @State private var finalAmount: CGFloat = 0.9
     
     var body: some View {
+        // allows a user to drag the sudoku around.
         let dragGesture = DragGesture(coordinateSpace: .local)
             .onChanged { value in
                 if self.currentOffset == .zero && self.sudoku.frame.offset.width != self.finalOffset.width && self.sudoku.frame.offset.height == self.finalOffset.height {
@@ -45,6 +46,7 @@ struct BoardView: View {
                 }
             }
         
+        // allows the user to zoom into the sudoku.
         let magnificationGesture = MagnificationGesture()
             .onChanged { value in
                 self.currentAmount = value - 1

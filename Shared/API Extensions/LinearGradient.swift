@@ -11,6 +11,7 @@ import SwiftUI
 extension LinearGradient {
     
     // MARK: Initializers
+    /// Initializes a `LinearGradient` from variadic arguments of type `Color`.
     init(_ colors: Color...) {
         self.init(gradient: Gradient(colors: colors), startPoint: .topLeading, endPoint: .bottomTrailing)
     }

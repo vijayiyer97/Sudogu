@@ -86,6 +86,8 @@ struct CellView_iOS: View {
         }
     }
     
+    // toggles a cell's foucsed zoom.
+    // focused zoom is when the sudoku is fully zoomed in and centered on a specific cell (the focus).
     private func toggleZoom() {
         let parameters = [
             HapticEngine.FeedbackParameter().setHapticsParameters(intensity: 0.5, sharpness: 0.5).setTimeParameters(delay: 0),

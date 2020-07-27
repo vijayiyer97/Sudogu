@@ -19,6 +19,7 @@ struct MainPanel: View {
             GeometryReader { proxy in
                 BoardView()
                 .onAppear {
+                    // set sudoku frame parameters so that the zoom and drag features will work properly.
                     let frame = proxy.frame(in: .named("Sudoku"))
                     let center = CGPoint(x: frame.midX, y: frame.midY)
                     

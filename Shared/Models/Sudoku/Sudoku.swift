@@ -143,6 +143,11 @@ extension Sudoku {
     var cells: Int { size * size }
 }
 
+// MARK: Instance Methods
+extension Sudoku {
+    
+}
+
 // MARK: Hashable Protocol Conformance
 extension Sudoku: Hashable {
     public static func == (lhs: Sudoku, rhs: Sudoku) -> Bool {

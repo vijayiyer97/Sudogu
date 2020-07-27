@@ -21,7 +21,7 @@ import SwiftUI
  * A descriptive state
  * The background color
  */
-public final class Cell: ObservableObject {
+final class Cell: ObservableObject {
     /// A typealias for the candidate set.
     typealias Candidates = Set<Value>
     
