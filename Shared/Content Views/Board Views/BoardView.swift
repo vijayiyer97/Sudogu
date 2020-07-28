@@ -89,8 +89,8 @@ struct BoardView: View {
                     ForEach(0..<sudoku.size) { j in
                         CellView(index: i*sudoku.size + j)
                             .border(Color.border, width: 0.75)
-                            .border(width: getBorder(sudoku[i][j].column, sudoku.dimensions.columns), edge: .leading, color: .black)
-                            .border(width: getBorder(sudoku[i][j].row, sudoku.dimensions.rows), edge: .top, color: .black)
+                            .border(width: getBorder(sudoku[i][j].column, sudoku.dimensions.columns), edge: .leading, color: .border)
+                            .border(width: getBorder(sudoku[i][j].row, sudoku.dimensions.rows), edge: .top, color: .border)
 
                     }
                 }

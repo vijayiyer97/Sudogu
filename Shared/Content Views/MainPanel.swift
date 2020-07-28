@@ -43,8 +43,7 @@ struct MainPanel: View {
                 )
             }
         }
-        .aspectRatio(1, contentMode: .fill)
-//        .scaleEffect(0.8)
+        .scaledToFit()
         .coordinateSpace(name: "Sudoku")
     }
 }

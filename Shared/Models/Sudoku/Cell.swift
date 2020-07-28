@@ -46,11 +46,11 @@ final class Cell: ObservableObject {
     var inFocus: Bool = false
     /// Stores the state of the cell.
     /// The state controls view behavior and functionality.
-    var state: State
+    var state: State?
     
     // MARK: Initializers
     // private initializer allows control over all stored properties
-    private init(state: State, value: Value?, candidates: Candidates, location: Location) {
+    private init(state: State?, value: Value?, candidates: Candidates, location: Location) {
         self.value = value
         self.candidates = candidates
         self.location = location
@@ -63,12 +63,11 @@ final class Cell: ObservableObject {
     /// - Parameter row: The global row position of the cell (row constraint).
     /// - Parameter column: The global column position of the cell (column constraint).
     /// - Parameter local: The cooridinate position in the local system (regional constraint).
-    init(value: Value, row: Int, column: Int, local: Coordinate) {
+    init(value: Int, row: Int, column: Int, local: Coordinate) {
         let global = Coordinate(row, column)
-        self.value = value
+        self.value = Value(value, state: .given)
         self.candidates = Candidates()
         self.location = Location(global: global, local: local)
-        self.state = .immutable
     }
     
     /// Initializes a given candidate set for an unsolved `Cell` instance.
@@ -82,7 +81,6 @@ final class Cell: ObservableObject {
         self.value = nil
         self.candidates = candidates
         self.location = Location(global: global, local: local)
-        self.state = .mutable
     }
 }
 
@@ -108,10 +106,6 @@ extension Cell {
      The descriptive state of a `Cell` instance.
      */
     enum State: String, CaseIterable {
-        /// A a state of an editable cell.
-        case mutable
-        /// A state of an uneditable cell.
-        case immutable
         /// A state of a cell with a correct value.
         case correct
         /// A state of a cell with an incorrect value.
@@ -131,15 +125,40 @@ extension Cell {
     /// The background color of the cell.
     var color: Color {
         switch state {
-        case .mutable:
-            return .complementary3
-        case .immutable:
-            return .clear
         case .correct:
             return Color.green.opacity(0.1)
         case .incorrect:
             return Color.red.opacity(0.1)
+        default:
+            return .clear
         }
+    }
+}
+
+// MARK: Instance Methods
+extension Cell {
+    /// Sets the given value if the current value is different, otherwise it removes the value.
+    /// - Parameter value: The value to modify.
+    func modify(value: Int) {
+        candidates = Set<Value>()
+        if self.value?.rawValue != value {
+            self.value = Value(value, state: .value)
+        } else {
+            self.value = nil
+        }
+    }
+    
+    // Sets the given candidate if the current value is different, otherwise it removes the value.
+    /// - Parameter candidate: The value to modify.
+    func modify(candidate: Int, state: Value.State) {
+        value = nil
+        let candidate = Value(candidate, state: state)
+        guard let _ = candidates.get(value: candidate) else {
+            candidates.remove(candidate)
+            candidates.insert(candidate)
+            return
+        }
+        candidates.remove(candidate)
     }
 }
 

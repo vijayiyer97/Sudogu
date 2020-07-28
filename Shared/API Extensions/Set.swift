@@ -13,4 +13,13 @@ extension Set where Set.Element == Value {
         
         return self[index]
     }
+    
+    func get(value: Value) -> Value? {
+        guard let index = firstIndex(of: value) else { return nil }
+        
+        let newValue = self[index]
+        guard newValue.state == value.state else { return nil }
+        
+        return newValue
+    }
 }

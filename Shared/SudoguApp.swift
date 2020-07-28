@@ -15,7 +15,7 @@ struct SudoguApp: App {
     @StateObject var ui: UserInterface = UserInterface()
     @StateObject var haptics: HapticEngine = HapticEngine()
     @StateObject var volume: VolumeObserver = VolumeObserver()
-    
+
     var body: some Scene {
         windowGroup
             .onChange(of: scenePhase) { newPhase in
@@ -28,6 +28,11 @@ struct SudoguApp: App {
             ContentView()
                 .environmentObject(sudoku)
                 .environmentObject(ui)
+                .environmentObject(haptics)
+                .environmentObject(volume)
+                .onAppear {
+                    sceneDidEnterForeground()
+                }
         }
     }
     
@@ -63,6 +68,6 @@ struct SudoguApp: App {
     }
     
     func sceneDidDisconnect() {
-        
+        sceneDidEnterBackground()
     }
 }

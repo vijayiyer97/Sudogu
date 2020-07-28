@@ -69,12 +69,14 @@ private extension NeumorphicPrimitveButton {
                         withAnimation(.easeInOut(duration: 0.15)) {
                             self.isPressed = self.dragState.isPressed
                         }
+                        #if os(iOS)
                         let depress = HapticEngine.FeedbackParameter().setAudioParameters(volume: self.volume.level, audioResource: self.haptics.audioResources["hardClick"])
                         let error = [
                             HapticEngine.FeedbackParameter().setHapticsParameters(intensity: 0.75, sharpness: 0.75).setAudioParameters(volume: self.volume.level*0.75, audioResource: self.haptics.audioResources["softClick"]).setTimeParameters(delay: 0),
                             HapticEngine.FeedbackParameter().setHapticsParameters(intensity: 0.75, sharpness: 0.75).setAudioParameters(volume: self.volume.level*0.75).setTimeParameters(delay: 0.15)
                         ]
                         self.isPressed ? self.haptics.fire(with: depress) : self.haptics.fire(with: error)
+                        #endif
                         self.configuration.trigger()
                     }
                     
@@ -85,10 +87,12 @@ private extension NeumorphicPrimitveButton {
                     }
                 }
                 .onEnded { _ in
+                    #if os(iOS)
                     if self.dragState == .inactive, !self.isOutOfBounds {
                         let release = HapticEngine.FeedbackParameter().setHapticsParameters(intensity: 0.5, sharpness: 0.5).setAudioParameters(volume: self.volume.level*0.75, audioResource: self.haptics.audioResources["softClick"])
                         self.haptics.fire(with: release)
                     }
+                    #endif
                     withAnimation(.easeOut(duration: 0.15)) {
                         self.isPressed = self.dragState.isPressed
                     }

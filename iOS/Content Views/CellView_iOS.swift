@@ -16,10 +16,8 @@ struct CellView_iOS: View {
     @State private var finalOffset: CGSize = .zero
     @State private var currentAmount: CGFloat = 0
     @State private var finalAmount: CGFloat = 0.95
+    @ObservedObject var cell: Cell
     
-    var index: Int
-    
-    private var cell: Cell { sudoku.values[index] }
     private var opacity: Double {
         var opacity: Double = 0
         if ui.selection?.row == cell.row { opacity += 0.1 }
@@ -48,7 +46,7 @@ struct CellView_iOS: View {
                         Rectangle()
                             .foregroundColor(.clear)
                             .overlay(
-                                NotesView(index: index, scale: 0.25)
+                                NotesView(cell: cell, scale: 0.25)
                             )
                     } else {
                         Rectangle()
@@ -64,12 +62,13 @@ struct CellView_iOS: View {
             }
             .buttonStyle(
                 MultiGestureButton(shape: Rectangle()) {
-                    toggleZoom()
+                    withAnimation {
+                        toggleZoom()
+                    }
                 }
             )
             .onAppear {
                 let frame = proxy.frame(in: .named("Board"))
-                let cell = sudoku.values[index]
                 cell.frame.center = CGPoint(x: frame.midX, y: frame.midY)
             }
         }
@@ -78,7 +77,6 @@ struct CellView_iOS: View {
     
     private func toggleSelection() {
         haptics.fire()
-        let cell = sudoku.values[index]
         if ui.selection == cell {
             ui.selection = nil
         } else {
@@ -94,7 +92,6 @@ struct CellView_iOS: View {
             HapticEngine.FeedbackParameter().setHapticsParameters(intensity: 0.75, sharpness: 0.75).setTimeParameters(delay: 0.15)
         ]
         haptics.fire(with: parameters)
-        let cell = sudoku.values[index]
         if ui.selection != cell || !cell.inFocus {
             let c1 = cell.frame.center
             let c2 = sudoku.frame.center

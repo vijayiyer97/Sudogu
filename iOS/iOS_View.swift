@@ -15,9 +15,11 @@ struct iOS_View: View {
         NavigationView {
             VStack(alignment: .center, spacing: 0) {
                 MainPanel()
+                MidPanel()
                 SubPanel()
+                    .scaleEffect(1)
             }
-            .navigationBarHidden(false)
+            .navigationBarHidden(true)
             .background(background)
         }
     }
