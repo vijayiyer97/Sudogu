@@ -33,13 +33,13 @@ public final class VolumeObserver: ObservableObject {
 
         progressObserver = session.observe(\.outputVolume) { [self] (session, value) in
             DispatchQueue.main.async {
-                self.level = session.outputVolume
+                level = session.outputVolume
             }
         }
     }
 
     /// Unsubscribes the app from  the  current `AVAudioSession`.
     func unsubscribe() {
-        self.progressObserver.invalidate()
+        progressObserver.invalidate()
     }
 }

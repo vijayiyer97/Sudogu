@@ -13,7 +13,7 @@ final class UserInterface: ObservableObject {
     /// The cell selected within the view.
     @Published var selection: Cell?
     /// The write mode of the app
-    @Published var editMode: Bool = false
+    @Published var editMode: State = .default
 }
 
 // MARK: Encapsulated Types

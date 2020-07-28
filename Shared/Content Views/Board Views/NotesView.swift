@@ -11,7 +11,7 @@ struct NotesView: View {
     @EnvironmentObject var sudoku: Sudoku
     
     /// Optionally stores each note inside a fixed width array.
-    var index: Int
+    @ObservedObject var cell: Cell
     /// Scales the number views within.
     var scale: CGFloat = 1
     
@@ -33,18 +33,6 @@ struct NotesView: View {
     }
     
     private func getValue(value: Int) -> Value? {
-        return sudoku.values[index].candidates.get(value: value)
-    }
-}
-
-struct NotesView_Previews: PreviewProvider {
-    static let sudoku: Sudoku = Sudoku.shared
-    static let index: Int = 0
-    static var previews: some View {
-        NotesView(index: index)
-            .environmentObject(sudoku)
-            .onAppear {
-//                sudoku.values[index] = Cell(candidates: Set(Value(1)...Value(9)), row: 0, column: 0, local: Coordinate(0, 0))
-            }
+        return cell.candidates.get(value: value)
     }
 }

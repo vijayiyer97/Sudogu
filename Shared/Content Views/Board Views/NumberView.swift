@@ -18,10 +18,24 @@ struct NumberView: View {
         value?.color
     }
     
+    /// Foreground opacity
+    private var opacity: Double? {
+        guard let value = value else { return nil }
+        switch value.state {
+        case .value:
+            return 0.5
+//        case .null:
+//            return 0.8
+        default:
+            return 1
+        }
+    }
+    
     var body: some View {
         if let value = value {
             Text(String(describing: value))
                 .font(.system(size: 50, weight: .medium, design: .rounded))
+                .opacity(opacity ?? 1)
                 .scaleEffect(scale)
                 .foregroundColor(foregroundColor ?? .text)
         }

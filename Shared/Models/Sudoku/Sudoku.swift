@@ -105,7 +105,7 @@ final class Sudoku: ObservableObject {
                 let region = Coordinate(row/dimensions.rows, col/dimensions.columns)
                 if let value = values[row][col] {
                     guard (1...size).contains(value), rowValues[row].insert(value).inserted, columnValues[col].insert(value).inserted, regionValues[region.row * rows + region.column].insert(value).inserted else { return nil }
-                    cell = Cell(value: Value(value), row: row, column: col, local: region)
+                    cell = Cell(value: value, row: row, column: col, local: region)
                 } else {
                     cell = Cell(candidates: Cell.Candidates(), row: row, column: col, local: region)
                 }
@@ -141,6 +141,11 @@ extension Sudoku {
     var size: Int { dimensions.cells }
     /// The number of cells contained in the sudoku.
     var cells: Int { size * size }
+}
+
+// MARK: Instance Methods
+extension Sudoku {
+    
 }
 
 // MARK: Hashable Protocol Conformance

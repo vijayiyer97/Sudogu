@@ -73,7 +73,7 @@ extension Value {
         case .focused:
             return .blue
         case .null:
-            return .complementary3
+            return .lightGray
         }
     }
 }

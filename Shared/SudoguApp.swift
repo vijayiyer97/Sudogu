@@ -15,9 +15,7 @@ struct SudoguApp: App {
     @StateObject var ui: UserInterface = UserInterface()
     @StateObject var haptics: HapticEngine = HapticEngine()
     @StateObject var volume: VolumeObserver = VolumeObserver()
-    
-    private let context: NSManagedObjectContext = PersistentStore.shared.context
-    
+
     var body: some Scene {
         windowGroup
             .onChange(of: scenePhase) { newPhase in
@@ -28,17 +26,12 @@ struct SudoguApp: App {
     var windowGroup: some Scene {
         WindowGroup {
             ContentView()
-                .environment(\.managedObjectContext, context)
                 .environmentObject(sudoku)
                 .environmentObject(ui)
+                .environmentObject(haptics)
+                .environmentObject(volume)
                 .onAppear {
-                    context.perform {
-                        
-//                        let insertRequest = NSBatchInsertRequest(entity: entity, objects: clients)
-//                        let insertResult = try? context.execute(insertRequest) as? NSBatchInsertRequest
-//                        let success = insertResult?.resultType
-//                        print("RESULT STATUS: \(success)")
-                    }
+                    sceneDidEnterForeground()
                 }
         }
     }
@@ -75,6 +68,6 @@ struct SudoguApp: App {
     }
     
     func sceneDidDisconnect() {
-        
+        sceneDidEnterBackground()
     }
 }
