@@ -44,7 +44,6 @@
 		B1A77A7B24CCF5D900E5BC97 /* MultiGestureButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A77A7A24CCF5D900E5BC97 /* MultiGestureButton.swift */; };
 		B1A77A7C24CCF5D900E5BC97 /* MultiGestureButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A77A7A24CCF5D900E5BC97 /* MultiGestureButton.swift */; };
 		B1BCAE0324CC7B5B00BEEB26 /* SudoguApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BCADF024CC7B5A00BEEB26 /* SudoguApp.swift */; };
-		B1BCAE0424CC7B5B00BEEB26 /* SudoguApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BCADF024CC7B5A00BEEB26 /* SudoguApp.swift */; };
 		B1BCAE0524CC7B5B00BEEB26 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BCADF124CC7B5A00BEEB26 /* ContentView.swift */; };
 		B1BCAE0624CC7B5B00BEEB26 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BCADF124CC7B5A00BEEB26 /* ContentView.swift */; };
 		B1BCAE0724CC7B5B00BEEB26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1BCADF224CC7B5B00BEEB26 /* Assets.xcassets */; };
@@ -65,10 +64,10 @@
 		B1BCAE3224CC845000BEEB26 /* Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BCAE3024CC844700BEEB26 /* Frame.swift */; };
 		B1BE918524CF954B0031455B /* MidPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BE918424CF954B0031455B /* MidPanel.swift */; };
 		B1BE918624CF954B0031455B /* MidPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BE918424CF954B0031455B /* MidPanel.swift */; };
+		B1BE918824CFABAC0031455B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B1BE918724CFABAC0031455B /* README.md */; };
+		B1BE918A24CFADCD0031455B /* SudoguApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BE918924CFADCD0031455B /* SudoguApp.swift */; };
 		B1C6B08C24CDE55700377655 /* Sudoku.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C6B08A24CDE55700377655 /* Sudoku.swift */; };
 		B1C6B08D24CDE55700377655 /* Sudoku.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C6B08A24CDE55700377655 /* Sudoku.swift */; };
-		B1CC9FD424CF867A006197F7 /* HapticEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B100EA6524CD16EB00B3977D /* HapticEngine.swift */; };
-		B1CC9FD524CF867A006197F7 /* VolumeObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = B100EA6824CD1E5900B3977D /* VolumeObserver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,6 +109,8 @@
 		B1BCAE2B24CC7C1100BEEB26 /* hardClick.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = hardClick.aiff; sourceTree = "<group>"; };
 		B1BCAE3024CC844700BEEB26 /* Frame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Frame.swift; sourceTree = "<group>"; };
 		B1BE918424CF954B0031455B /* MidPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MidPanel.swift; sourceTree = "<group>"; };
+		B1BE918724CFABAC0031455B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B1BE918924CFADCD0031455B /* SudoguApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudoguApp.swift; sourceTree = "<group>"; };
 		B1C6B08A24CDE55700377655 /* Sudoku.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sudoku.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -154,7 +155,8 @@
 		B168C2EE24CC88A500FFE4A1 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				B1BCAE2924CC7C1100BEEB26 /* Sounds */,
+				B1BCAE2A24CC7C1100BEEB26 /* softClick.aiff */,
+				B1BCAE2B24CC7C1100BEEB26 /* hardClick.aiff */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -191,6 +193,7 @@
 		B1BCADEA24CC7B5A00BEEB26 = {
 			isa = PBXGroup;
 			children = (
+				B1BE918724CFABAC0031455B /* README.md */,
 				B1BCADEF24CC7B5A00BEEB26 /* Shared */,
 				B1BCADF924CC7B5B00BEEB26 /* iOS */,
 				B1BCAE0024CC7B5B00BEEB26 /* macOS */,
@@ -201,7 +204,6 @@
 		B1BCADEF24CC7B5A00BEEB26 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				B1BCADF024CC7B5A00BEEB26 /* SudoguApp.swift */,
 				B1BCADF124CC7B5A00BEEB26 /* ContentView.swift */,
 				B1BCAE1A24CC7BD800BEEB26 /* API Extensions */,
 				B168C2ED24CC870A00FFE4A1 /* Content Views */,
@@ -224,8 +226,10 @@
 		B1BCADF924CC7B5B00BEEB26 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				B1BCADF024CC7B5A00BEEB26 /* SudoguApp.swift */,
 				B168C2F024CC890800FFE4A1 /* iOS_View.swift */,
 				B168C2EF24CC88E200FFE4A1 /* Content Views */,
+				B1BE918B24CFAE2C0031455B /* Wrappers */,
 				B168C2EE24CC88A500FFE4A1 /* Assets */,
 				B1BCADFA24CC7B5B00BEEB26 /* Info.plist */,
 			);
@@ -239,6 +243,7 @@
 				B1473D6F24CCA6DD00584F88 /* ContentViews */,
 				B1BCAE0124CC7B5B00BEEB26 /* Info.plist */,
 				B1BCAE0224CC7B5B00BEEB26 /* macOS.entitlements */,
+				B1BE918924CFADCD0031455B /* SudoguApp.swift */,
 			);
 			path = macOS;
 			sourceTree = "<group>";
@@ -277,8 +282,6 @@
 			children = (
 				B1BCAE3024CC844700BEEB26 /* Frame.swift */,
 				B12F19B624CD056B00CF5695 /* EdgeSet.swift */,
-				B100EA6524CD16EB00B3977D /* HapticEngine.swift */,
-				B100EA6824CD1E5900B3977D /* VolumeObserver.swift */,
 			);
 			path = Wrappers;
 			sourceTree = "<group>";
@@ -303,13 +306,13 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
-		B1BCAE2924CC7C1100BEEB26 /* Sounds */ = {
+		B1BE918B24CFAE2C0031455B /* Wrappers */ = {
 			isa = PBXGroup;
 			children = (
-				B1BCAE2A24CC7C1100BEEB26 /* softClick.aiff */,
-				B1BCAE2B24CC7C1100BEEB26 /* hardClick.aiff */,
+				B100EA6524CD16EB00B3977D /* HapticEngine.swift */,
+				B100EA6824CD1E5900B3977D /* VolumeObserver.swift */,
 			);
-			path = Sounds;
+			path = Wrappers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -392,6 +395,7 @@
 			files = (
 				B1BCAE2E24CC7C1100BEEB26 /* hardClick.aiff in Resources */,
 				B1BCAE2C24CC7C1100BEEB26 /* softClick.aiff in Resources */,
+				B1BE918824CFABAC0031455B /* README.md in Resources */,
 				B1BCAE0724CC7B5B00BEEB26 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,16 +465,14 @@
 				B12F19BB24CD061D00CF5695 /* View.swift in Sources */,
 				B168C2EC24CC86CD00FFE4A1 /* LinearGradient.swift in Sources */,
 				B100EA5E24CD147500B3977D /* SubPanel.swift in Sources */,
-				B1CC9FD424CF867A006197F7 /* HapticEngine.swift in Sources */,
 				B1473D6E24CCA6D300584F88 /* CellView.swift in Sources */,
 				B168C2F524CC89B900FFE4A1 /* macOS_View.swift in Sources */,
-				B1BCAE0424CC7B5B00BEEB26 /* SudoguApp.swift in Sources */,
 				B1BCAE2124CC7BD800BEEB26 /* Value.swift in Sources */,
 				B1BCAE1D24CC7BD800BEEB26 /* Dimensions.swift in Sources */,
-				B1CC9FD524CF867A006197F7 /* VolumeObserver.swift in Sources */,
 				B100EA6124CD15A400B3977D /* NeumorphicPrimitveButton.swift in Sources */,
 				B1C6B08D24CDE55700377655 /* Sudoku.swift in Sources */,
 				B12F19B824CD056B00CF5695 /* EdgeSet.swift in Sources */,
+				B1BE918A24CFADCD0031455B /* SudoguApp.swift in Sources */,
 				B1BCAE1F24CC7BD800BEEB26 /* Coordinate.swift in Sources */,
 				B1BCAE2724CC7BD800BEEB26 /* Color.swift in Sources */,
 				B1BCAE2324CC7BD800BEEB26 /* Cell.swift in Sources */,

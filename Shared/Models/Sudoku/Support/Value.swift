@@ -132,18 +132,18 @@ extension Value: Hashable {
     }
 }
 
-// MARK: Comparable Protocol Conformance
-extension Value: Strideable {
-    typealias Stride = Int
-    
-    func distance(to other: Value) -> Stride {
-        return other.rawValue - self.rawValue
-    }
-    
-    func advanced(by n: Stride) -> Value {
-        return Value(self.rawValue + n, state: self.state)
-    }
-}
+//// MARK: Comparable Protocol Conformance
+//extension Value: Strideable {
+//    typealias Stride = Int
+//    
+//    func distance(to other: Value) -> Stride {
+//        return other.rawValue - self.rawValue
+//    }
+//    
+//    func advanced(by n: Stride) -> Value {
+//        return Value(self.rawValue + n, state: self.state)
+//    }
+//}
 
 // MARK: CustomStringConvertible Protocol Conformance
 extension Value: CustomStringConvertible {

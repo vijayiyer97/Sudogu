@@ -1,12 +1,11 @@
 //
 //  SudoguApp.swift
-//  Sudogu
+//  Sudogu (iOS)
 //
 //  Created by Vijay Iyer on 7/25/20.
 //
 
 import SwiftUI
-import CoreData
 
 @main
 struct SudoguApp: App {

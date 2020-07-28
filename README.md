@@ -3,7 +3,7 @@ An iOS app to generate, and to computationally or naturally solve sudoku puzzles
 
 ## Features
 
-### Planned
+### Current
 - Gesture interactable sudoku board
     - Single tap selects cell
     - Double tap toggles cell focused zoom
@@ -12,6 +12,9 @@ An iOS app to generate, and to computationally or naturally solve sudoku puzzles
 - Tactile buttons with haptic and audible feedback
 - Support for various actions
     - Toggle between write modes
+
+### Planned
+- Support for various actions
     - Undo previous edits to the board
     - Generate, solve, and reset sudoku boards
 - Support for save states
